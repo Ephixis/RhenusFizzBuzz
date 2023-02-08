@@ -1,5 +1,4 @@
 package com.rhenus.rhenusfizzbuzz;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -8,7 +7,7 @@ import java.util.List;
 @Service
 public class FizzBuzzService {
 
-    public List getFizzBuzz(int length){
+    public List<String> getFizzBuzz(int length){
 
         List<String> results = new ArrayList<>();
 
@@ -22,10 +21,8 @@ public class FizzBuzzService {
                 continue;
             } else if (a%5==0) {
                 results.add("Buzz");
-                continue;
             } else if (a%3 == 0) {
                 results.add("Fizz");
-                continue;
             }
             results.add(""+a);
         }
